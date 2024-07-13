@@ -1,17 +1,24 @@
 FROM node:18-slim
 
+RUN npm install -g pnpm
+
 ENV NODE_ENV development
 
 WORKDIR /app
 
-COPY package.json package-lock.json ./
+COPY package.json pnpm-workspace.yaml pnpm-lock.yaml ./
+COPY auth/package.json ./auth/
+COPY dashboard/package.json ./dashboard/
+COPY profile/package.json ./profile/
+COPY shell/package.json ./shell/
+COPY utils/package.json ./utils/
 
-RUN npm install \
+RUN pnpm install \
     && npm i -g jest \
     && npx playwright install --with-deps chromium
 
 COPY . .
 
-CMD [ "yarn", "start" ]
+CMD [ "pnpm", "start" ]
 
 EXPOSE 3000
