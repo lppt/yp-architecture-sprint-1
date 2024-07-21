@@ -60,4 +60,6 @@ pnpm start
 
 # Ссылка на второе задание
 
-https://drive.google.com/file/d/1BWAYgOd460ORsV4BTI2jMFNwiQ809FAp/view?usp=sharing
+Вот ссылка на драйв: https://drive.google.com/file/d/1BWAYgOd460ORsV4BTI2jMFNwiQ809FAp/view?usp=sharing
+
+На всякий случай в этом же репозитории лежит файл исходник praktikum_arch_template.drawio.xml
